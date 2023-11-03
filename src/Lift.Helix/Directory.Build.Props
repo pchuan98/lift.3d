@@ -1,0 +1,22 @@
+﻿<Project>
+
+  <!--append global shared path value-->
+  <PropertyGroup>
+    <SharedPath>..\Lift.Helix.Shared\Themes</SharedPath>
+    <TargetFile>Themes\Generic.xaml</TargetFile>
+  </PropertyGroup>
+
+  <!--auto merge xaml with XAMLTools-->
+  <ItemGroup>
+    <PackageReference Include="XAMLTools.MSBuild" Version="1.0.0-alpha0143">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+
+    <XAMLCombineItems Include="$(SharedPath)\**\*.xaml">
+      <TargetFile>$(TargetFile)</TargetFile>
+      <Visible>False</Visible>
+    </XAMLCombineItems>
+  </ItemGroup>
+
+</Project>

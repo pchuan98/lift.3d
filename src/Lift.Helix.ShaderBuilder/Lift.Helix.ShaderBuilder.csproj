@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="echo -----------------------------------------------------------&#xD;&#xA;echo Start to copy cso files to resoruces...&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;for /r &quot;$(OutDir)Terrain&quot; %25%25i in (*.cso) do xcopy /f /i /y /q &quot;%25%25i&quot; &quot;$(ProjectDir)..\Lift.Helix\Resources\Shaders\Terrain\&quot; &#xD;&#xA;echo -----------------------------------------------------------" />
+  </Target>
+
+</Project>

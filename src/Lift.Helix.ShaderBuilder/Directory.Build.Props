@@ -1,0 +1,18 @@
+﻿<Project>
+  <!--auto build hlsl to resources-->
+  <ItemGroup>
+    <PackageReference Include="JeremyAnsel.HLSL.Targets" Version="2.0.20" />
+
+    <!--Terrain-->
+    <HLSLShader Include="Terrain\psMeshDataSampling.hlsl">
+      <ShaderProfile>ps_4_0</ShaderProfile>
+    </HLSLShader>
+    <HLSLShader Include="Terrain\vsMeshDataSampling.hlsl">
+      <ShaderProfile>vs_4_0</ShaderProfile>
+    </HLSLShader>
+    <HLSLShader Include="Terrain\psCustomPoint.hlsl">
+      <ShaderProfile>ps_4_0</ShaderProfile>
+    </HLSLShader>
+  </ItemGroup>
+
+</Project>

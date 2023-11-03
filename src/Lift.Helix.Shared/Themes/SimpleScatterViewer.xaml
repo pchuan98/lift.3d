@@ -1,0 +1,61 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:attach="clr-namespace:Lift.Helix.Attach"
+    xmlns:componets="clr-namespace:Lift.Helix.Controls.Componets"
+    xmlns:controls="clr-namespace:Lift.Helix.Controls"
+    xmlns:helix="https://github.com/pchuan98/helix">
+
+    <Rect3D
+        x:Key="DefaultRect"
+        SizeX="100"
+        SizeY="100"
+        SizeZ="100"
+        X="0"
+        Y="0"
+        Z="0" />
+
+    <Style x:Key="BaseSimpleScatterViewer" TargetType="controls:SimpleScatterViewer">
+
+        <!--<Setter Property="attach:BoundAttach.Diameter" Value="1" />
+        <Setter Property="attach:BoundAttach.Location" Value="{StaticResource DefaultRect}" />-->
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="controls:SimpleScatterViewer">
+                    <controls:SimplePanel Background="Transparent">
+
+                        <helix:HelixViewport3D
+                            x:Name="PART_Port"
+                            Background="{TemplateBinding Background}"
+                            CameraMode="Inspect"
+                            Foreground="{TemplateBinding Foreground}"
+                            InfiniteSpin="True"
+                            InfoBackground="Transparent"
+                            InfoForeground="Black"
+                            IsHeadLightEnabled="True"
+                            RotationSensitivity="0.5"
+                            ShowCameraInfo="True"
+                            ShowCameraTarget="True"
+                            ShowCoordinateSystem="False"
+                            ShowFieldOfView="True"
+                            ShowFrameRate="True"
+                            ShowTriangleCountInfo="True"
+                            ShowViewCube="False"
+                            ZoomExtentsWhenLoaded="True">
+
+                            <helix:WhiteLight />
+
+                            <componets:BoundViewer x:Name="PART_Bound" />
+                            <ModelVisual3D x:Name="PART_Axis" />
+                            <ModelVisual3D x:Name="PART_Scatter" />
+
+                        </helix:HelixViewport3D>
+                    </controls:SimplePanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style BasedOn="{StaticResource BaseSimpleScatterViewer}" TargetType="controls:SimpleScatterViewer" />
+</ResourceDictionary>
