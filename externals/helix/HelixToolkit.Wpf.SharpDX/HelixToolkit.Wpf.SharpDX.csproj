@@ -1,0 +1,77 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<!--<TargetFramework>net5.0-windows</TargetFramework>-->
+		<!--<TargetFramework>net5.0-windows10.0.19041.0</TargetFramework>-->
+		<TargetFramework>net6.0-windows</TargetFramework>
+
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+
+		<UseWindowsForms>true</UseWindowsForms>
+		<SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
+		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	  <DefineConstants>$(DefineConstants);DX11; MSAA; SHARPDX;</DefineConstants>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+	  <DefineConstants>$(DefineConstants);DX11; MSAA; SHARPDX;</DefineConstants>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="Textures\arial.dds" />
+	  <None Remove="Textures\arial.fnt" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Include="Textures\arial.dds" />
+	  <EmbeddedResource Include="Textures\arial.fnt" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Cyotek.Drawing.BitmapFont" Version="2.0.4" />
+		<!--<PackageReference Include="Microsoft.Windows.SDK.Contracts" Version="10.0.22621.755" />-->
+		<PackageReference Include="SharpDX.D3DCompiler" Version="4.2.0" />
+		<PackageReference Include="SharpDX.Direct2D1" Version="4.2.0" />
+		<PackageReference Include="SharpDX.Direct3D11" Version="4.2.0" />
+		<PackageReference Include="SharpDX.Direct3D9" Version="4.2.0" />
+		<PackageReference Include="SharpDX.Mathematics" Version="4.2.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="Model\Elements3D\DraggableGeometryModel3D.cs">
+		  <SubType>Code</SubType>
+		</Compile>
+		<Compile Update="Properties\Resources.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Resources.resx</DependentUpon>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Update="Properties\Resources.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>Resources.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+	</ItemGroup>
+
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.0" />
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<Import Project="..\HelixToolkit.SharpDX.Shared\HelixToolkit.SharpDX.Shared.projitems" Label="Shared" />
+
+	<Import Project="..\HelixToolkit.Shared\HelixToolkit.Shared.projitems" Label="Shared" />
+
+	<Import Project="..\HelixToolkit.SharpDX.SharedModel\HelixToolkit.SharpDX.SharedModel.projitems" Label="Shared" />
+
+</Project>

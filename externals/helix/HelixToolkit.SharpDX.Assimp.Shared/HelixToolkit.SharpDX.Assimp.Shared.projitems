@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>28e42939-814f-4e08-9cb1-69b493605db6</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>HelixToolkit.SharpDX.Assimp.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Configurations.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DefaultTexturePathResolver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Exporter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ExporterPartial_Animation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ExporterPartial_Element3D.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ExporterPartial_Material.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ExporterPartial_Mesh.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)glTFMatKeys.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)HelixToolkitScene.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Importer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ImporterPartial_Animation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ImporterPartial_Material.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ImporterPartial_Mesh.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)HelixToolkit.SharpDX.Shared.licenseheader" />
+  </ItemGroup>
+</Project>

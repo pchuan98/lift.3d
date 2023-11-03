@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HelixToolkit.Shared", "HelixToolkit.Shared\HelixToolkit.Shared.shproj", "{4EE18E80-7609-4FFF-BD4B-F02728EC0688}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelixToolkit.Wpf", "HelixToolkit.Wpf\HelixToolkit.Wpf.csproj", "{DF39B8B3-2717-416A-A188-FC7D8C47B402}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelixToolkit.Native.ShaderBuilder", "HelixToolkit.Native.ShaderBuilder\HelixToolkit.Native.ShaderBuilder.csproj", "{E27C0232-4E6A-43CE-9C66-A64EE4E7C01F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF39B8B3-2717-416A-A188-FC7D8C47B402}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF39B8B3-2717-416A-A188-FC7D8C47B402}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF39B8B3-2717-416A-A188-FC7D8C47B402}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF39B8B3-2717-416A-A188-FC7D8C47B402}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E27C0232-4E6A-43CE-9C66-A64EE4E7C01F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E27C0232-4E6A-43CE-9C66-A64EE4E7C01F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E27C0232-4E6A-43CE-9C66-A64EE4E7C01F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E27C0232-4E6A-43CE-9C66-A64EE4E7C01F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E643792B-08BD-4FCD-9AA3-9D90B517EAAF}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		HelixToolkit.Shared\HelixToolkit.Shared.projitems*{4ee18e80-7609-4fff-bd4b-f02728ec0688}*SharedItemsImports = 13
+		HelixToolkit.Shared\HelixToolkit.Shared.projitems*{df39b8b3-2717-416a-a188-fc7d8c47b402}*SharedItemsImports = 5
+	EndGlobalSection
+EndGlobal

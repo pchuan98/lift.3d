@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Compile Update="Controls\Stereo\AnaglyphView3D.xaml.cs">
+	    <DependentUpon>AnaglyphView3D.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Controls\Stereo\InterlacedView3D.xaml.cs">
+	    <DependentUpon>InterlacedView3D.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Controls\Stereo\StereoView3D.xaml.cs">
+	    <DependentUpon>StereoView3D.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Controls\Stereo\WiggleView3D.xaml.cs">
+	    <DependentUpon>WiggleView3D.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<Import Project="..\HelixToolkit.Shared\HelixToolkit.Shared.projitems" Label="Shared" />
+ 
+</Project>
